@@ -1,0 +1,1 @@
+SET_HOLOLIVE                = 0x500

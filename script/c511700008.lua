@@ -43,7 +43,7 @@ function s.banop(e,tp,eg,ep,ev,re,r,rp)
 	local exc=c:IsRelateToEffect(e) and c or nil
 	local g=Duel.GetMatchingGroup(nil,tp,LOCATION_MZONE,LOCATION_MZONE,exc)
 	if #g>0 then
-		Duel.Remove(g,REASON_EFFECT)
+		Duel.Remove(g,POS_FACEUP,REASON_EFFECT)
 	end
 end
 

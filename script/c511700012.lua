@@ -1,4 +1,4 @@
---Hololive Best Grill Shiori
+--Hololive Baby Biboo
 local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
@@ -35,8 +35,8 @@ function s.lcheck(g,lc,sumtype,tp)
 	return g:IsExists(Card.IsAttribute,1,nil,ATTRIBUTE_FIRE,lc,sumtype,tp)
 end
 
-function s.spfilter(c,e,tp,zone)
-	return c:IsAttribute(ATTRIBUTE_FIRE) and (zone~=0 and c:IsCanBeSpecialSummoned(e,0,tp,false,false,POS_FACEUP,tp,zone))
+function s.filter(c,e,tp,zone)
+	return c:IsSetCard(0x500) and c:IsAttribute(ATTRIBUTE_FIRE) and (zone~=0 and c:IsCanBeSpecialSummoned(e,0,tp,false,false,POS_FACEUP,tp,zone))
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	local c=e:GetHandler()

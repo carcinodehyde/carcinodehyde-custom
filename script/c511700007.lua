@@ -81,7 +81,7 @@ function s.spop2(e,tp,eg,ep,ev,re,r,rp)
 	if tc then
 		if Duel.SpecialSummon(tc,0,tp,tp,false,false,POS_FACEUP)>0 then
             local sg=Duel.GetMatchingGroup(s.exfilter,tp,LOCATION_EXTRA,0,nil)
-            if #sg==0 or not Duel.SelectYesNo(tp,aux.Stringid(id,5)) then return end
+            if #sg==0 or not Duel.SelectYesNo(tp,aux.Stringid(id,1)) then return end
             Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
             local sc=sg:Select(tp,1,1,nil):GetFirst()
             if not sc then return end
